@@ -13,3 +13,15 @@
    - безпосередньо реальному часі в адмінську частину Web-застосунку (браузер технічного спеціаліста)
    - формує QR-код з результатами для оффлайн режиму
 1. Опційно, користувач пересилає скріншот з результатами технічному спеціалісту
+
+## Get started / Запуск програми
+
+```
+# Install dependencies
+npm install
+
+# Start React + TypeScript compiler
+npm run start
+
+# Open Web browser at http://localhost:5173/. The app will redirect your browser to "preview mode" URL.
+```
