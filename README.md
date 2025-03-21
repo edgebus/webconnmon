@@ -6,7 +6,7 @@
 
 ## How it works / Як це працює?
 
-1. Технічний спеціаліст відвідує [адмінську частину](https://webconnmon.edgebus.com/admin) Web-застосунку для налаштувань сценарію сканування/тестування результатом чого формує унікальний URL
+1. Технічний спеціаліст відвідує [адмінську частину](https://webconnmon.edgebus.io/admin) Web-застосунку для налаштувань сценарію сканування/тестування результатом чого формує унікальний URL
 1. Технічний спеціаліст спонукає користувача відкрити попередньо сформований URL в браузері на "проблемному" пристрої
 1. Клієнтська частина Web-застосунку проводить серію сканування/тестування
 1. Клієнтська частина Web-застосунку інформує про результати:
@@ -14,14 +14,23 @@
    - формує QR-код з результатами для оффлайн режиму
 1. Опційно, користувач пересилає скріншот з результатами технічному спеціалісту
 
-## Get started / Запуск програми
+## Development
+
+### Get started
 
 ```
+# Create own configuration (optional)
+cp .env.example .env
+
+# Choose right version of Node JS
+nvm use v22.11.0
+
 # Install dependencies
 npm install
 
-# Start React + TypeScript compiler
+# Start Vite development server
 npm run start
 
-# Open Web browser at http://localhost:5173/. The app will redirect your browser to "preview mode" URL.
+# Open Web browser at http://127.0.0.1:55130/app
+open http://127.0.0.1:55130/app
 ```
