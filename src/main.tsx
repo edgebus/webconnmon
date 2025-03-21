@@ -1,19 +1,22 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import Landing_App from './landing_app.tsx'
-import Admin_App from './admin_app.tsx'
-import Progress_App from './progress_app.tsx'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-createRoot(document.getElementById('root')!).render(
+import "./main.css";
+
+import LandingPage from "./pages/landing.page.jsx";
+import AdminPage from "./pages/admin.page.jsx";
+import ScanPage from "./pages/scan.page.jsx";
+
+createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Landing_App />} />
-        <Route path="/admin" element={<Admin_App />} />
-        <Route path="/progress" element={<Progress_App/>} />
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/admin" element={<AdminPage />} />
+        <Route path="/scan/:serializedSettings" element={<ScanPage />} />
+        <Route path="*" element={<h1>404 No such page</h1>} />
       </Routes>
     </BrowserRouter>
-  </StrictMode>,
-)
+  </StrictMode>
+);
